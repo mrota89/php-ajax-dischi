@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>php-ajax-dischi-milestone-1</title>
+  <title>php-ajax-dischi-milestone-2</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -20,11 +20,11 @@
     </header>
 
     <div class="cds-container container">
-      <div class="cd">
-        <img src="" alt="">
-        <h3></h3>
-        <span class="author"></span>
-        <span class="year"></span>
+      <div v-for="element in album" class="cd">
+        <img :src="element.copertina" alt="">
+        <h3>{{element.titolo}}</h3>
+        <span class="author">{{element.autore}}</span>
+        <span class="year">{{element.anno}}</span>
       </div>
     </div>
   </div>
