@@ -15,7 +15,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 800px;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
 }
@@ -29,6 +29,13 @@ header img {
   height: 50px;
   margin-top: 10px;
   margin-right: 10px;
+}
+header .search {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  height: 50px;
+  justify-content: space-between;
 }
 
 .cds-container {

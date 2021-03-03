@@ -15,7 +15,7 @@ body {
 .container {
   @include flex-row;
   @include flex-start-center;
-  width: 800px;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
 
@@ -30,6 +30,13 @@ header {
     height: 50px;
     margin-top: 10px;
     margin-right: 10px;
+  }
+
+  .search {
+    @include flex-column;
+    color: $color-title-year;
+    height: 50px;
+    justify-content: space-between;
   }
 }
 

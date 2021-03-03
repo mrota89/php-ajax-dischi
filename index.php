@@ -22,7 +22,7 @@
 
      <div class="cds-container container">
        <?php
-          foreach ($dischi["response"] as $disco) {
+          foreach ($dischi as $disco) {
         ?>
        <div class="cd">
          <img src="<?php echo $disco["copertina"]?>" alt="">

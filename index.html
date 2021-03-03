@@ -16,6 +16,14 @@
     <header>
       <div class="container">
         <img src="img/logo.png" alt="logo" />
+        <div class="search">
+            <div class="">Filtra per categoria</div>
+            <select v-model="selected" @click="selectFunction">
+              <option disabled value="">Scegli una categoria</option>
+              <option>Tutti i generi</option>
+              <option v-for="option in options" :value="option">{{option}}</option>
+            </select>
+          </div>
       </div>
     </header>
 
