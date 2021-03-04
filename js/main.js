@@ -16,11 +16,19 @@ new Vue({
 
   methods: {
     selectFunction: function() {
-      axios.get(`http://localhost/github/esercizi-php/php-ajax-dischi/app/server.php?genere=${this.selected}`)
+      if(this.selected === "Tutti i generi" ) {
+      axios.get('http://localhost/github/esercizi-php/php-ajax-dischi/app/server.php')
       .then((xhr) => {
         let dataObject = xhr.data;
         this.album = dataObject;
       });
+    } else {
+        axios.get(`http://localhost/github/esercizi-php/php-ajax-dischi/app/server.php?genere=${this.selected}`)
+        .then((xhr) => {
+          let dataObject = xhr.data;
+          this.album = dataObject;
+        });
+      }
     }
   }//end methods
 })//end vue app
